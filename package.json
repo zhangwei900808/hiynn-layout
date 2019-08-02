@@ -1,6 +1,6 @@
 {
   "name": "hiynn-layout",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "海云 UI 布局组件",
   "main": "src/main.js",
   "scripts": {
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/zhangwei900808/hiynn-layout/issues"
   },
-  "homepage": "https://github.com/zhangwei900808/hiynn-layout#readme"
+  "homepage": "https://github.com/zhangwei900808/hiynn-layout#readme",
+  "dependencies": {
+    "antd": "^3.20.7",
+    "react": "^16.8.6"
+  }
 }
