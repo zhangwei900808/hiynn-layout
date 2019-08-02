@@ -1,0 +1,20 @@
+{
+  "name": "hiynn-layout",
+  "version": "0.0.1",
+  "description": "海云 UI 布局组件",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zhangwei900808/hiynn-layout.git"
+  },
+  "author": "zhangwei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhangwei900808/hiynn-layout/issues"
+  },
+  "homepage": "https://github.com/zhangwei900808/hiynn-layout#readme"
+}
