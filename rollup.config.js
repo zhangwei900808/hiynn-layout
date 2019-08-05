@@ -23,9 +23,11 @@ const env = process.env.NODE_ENV;
 export default {
   input: "src/index.js",
   output: {
-    file: "lib/hiynn-layout.js",
+    dir: "lib",
+    // file: "lib/hiynn-layout.js",
     format: "cjs",
-    indent: false
+    sourcemap: true,
+    exports: "named"
     // globals: {
     //   react: "React", // 这跟external 是配套使用的，指明global.React即是外部依赖react
     //   antd: "antd"
@@ -41,16 +43,16 @@ export default {
       // modules: true, // 增加 css-module 功能
       extensions: [".pcss", ".less", ".css"],
       plugins: [nested(), cssnext({ warnForDuplicates: false }), cssnano()],
-      use: [
-        [
-          "less",
-          {
-            javascriptEnabled: true
-          }
-        ]
-      ],
+      // use: [
+      //   [
+      //     "less",
+      //     {
+      //       javascriptEnabled: true
+      //     }
+      //   ]
+      // ],
       //   inject: isDev, // dev 环境下的 样式是入住到 js 中的，其他环境不会注入
-      extract: true // 无论是 dev 还是其他环境这个配置项都不做 样式的抽离
+      extract: false // 无论是 dev 还是其他环境这个配置项都不做 样式的抽离
     }),
     url(),
     babel({
