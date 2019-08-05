@@ -3,8 +3,10 @@ import { Button } from "antd";
 
 class Demo extends Component {
   render() {
-    return <div>this is demo component</div>;
+    return (
+      <div>
+        <Button type="primary">this is demo component</Button>
+      </div>
+    );
   }
 }
-
-export default Demo;
