@@ -13,6 +13,11 @@ import resolve from "rollup-plugin-node-resolve";
 import { uglify } from "rollup-plugin-uglify";
 import replace from "rollup-plugin-replace";
 import json from "rollup-plugin-json";
+
+import nested from "postcss-nested";
+import cssnext from "postcss-cssnext";
+import cssnano from "cssnano";
+
 const env = process.env.NODE_ENV;
 
 export default {
@@ -35,6 +40,7 @@ export default {
     postcss({
       // modules: true, // 增加 css-module 功能
       extensions: [".less", ".css"],
+      plugins: [nested(), cssnext({ warnForDuplicates: false }), cssnano()],
       use: [
         [
           "less",
@@ -44,7 +50,7 @@ export default {
         ]
       ],
       //   inject: isDev, // dev 环境下的 样式是入住到 js 中的，其他环境不会注入
-      extract: false // 无论是 dev 还是其他环境这个配置项都不做 样式的抽离
+      extract: true // 无论是 dev 还是其他环境这个配置项都不做 样式的抽离
     }),
     url(),
     babel({
