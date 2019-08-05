@@ -13,6 +13,7 @@ import resolve from "rollup-plugin-node-resolve";
 import { uglify } from "rollup-plugin-uglify";
 import replace from "rollup-plugin-replace";
 import json from "rollup-plugin-json";
+const env = process.env.NODE_ENV;
 
 export default {
   input: "src/index.js",
@@ -59,8 +60,8 @@ export default {
       exclude: ["src/styles/**"]
     }),
     replace({
-      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
+      "process.env.NODE_ENV": JSON.stringify(env)
     }),
-    process.env.NODE_ENV === "production" && uglify()
+    env === "production" && uglify()
   ]
 };
