@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "antd";
-import "./styles/demo.css";
+import "styles/demo.pcss";
 
 class Demo extends Component {
   render() {

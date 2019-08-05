@@ -39,7 +39,7 @@ export default {
   plugins: [
     postcss({
       // modules: true, // 增加 css-module 功能
-      extensions: [".less", ".css"],
+      extensions: [".pcss", ".less", ".css"],
       plugins: [nested(), cssnext({ warnForDuplicates: false }), cssnano()],
       use: [
         [
