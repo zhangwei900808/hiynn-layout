@@ -1,1 +1,3 @@
-export default "./Demo";
+import Demo from "./Demo";
+
+export default Demo;

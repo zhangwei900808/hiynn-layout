@@ -17,16 +17,13 @@ import json from "rollup-plugin-json";
 export default {
   input: "src/index.js",
   output: {
-    // 可以是 dir 表示输出目录 也可以是 file 表示输出文件
-    dir: "build",
+    file: "lib/hiynn-layout.js",
     format: "cjs",
-    sourceMap: true,
-    entryFileNames: "[name]/index.js",
-    exports: "named",
-    globals: {
-      react: "React", // 这跟external 是配套使用的，指明global.React即是外部依赖react
-      antd: "antd"
-    }
+    indent: false
+    // globals: {
+    //   react: "React", // 这跟external 是配套使用的，指明global.React即是外部依赖react
+    //   antd: "antd"
+    // }
   },
   //告诉rollup不要将此lodash打包，而作为外部依赖
   external: ["react", "lodash", "antd"],
