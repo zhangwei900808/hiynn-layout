@@ -1,6 +1,6 @@
 {
   "name": "hiynn-layout",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "海云 UI 布局组件",
   "main": "lib/hiynn-layout.js",
   "scripts": {
